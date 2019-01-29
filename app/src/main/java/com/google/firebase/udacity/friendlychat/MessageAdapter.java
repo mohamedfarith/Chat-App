@@ -14,35 +14,42 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyMessag
     Context context;
     ArrayList<FriendlyMessage> messagesList;
     public static final String TAG = MessageAdapter.class.getSimpleName();
-    MessageAdapter(Context context, ArrayList<FriendlyMessage> messagesList){
-     this.context = context;
-     this.messagesList = messagesList;
+
+    MessageAdapter(Context context, ArrayList<FriendlyMessage> messagesList) {
+        this.context = context;
+        this.messagesList = messagesList;
     }
+
     @Override
     public MyMessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent, false);
         return new MyMessageViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MyMessageViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: is called "+messagesList.get(position).getText());
-            holder.message.setText(messagesList.get(position).getText());
-            holder.name.setText(messagesList.get(position).getName());
+        Log.d(TAG, "onBindViewHolder: is called " + messagesList.get(position).getText());
+        holder.message.setText(messagesList.get(position).getText());
+        holder.name.setText(messagesList.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
         return messagesList.size();
     }
-    class MyMessageViewHolder extends RecyclerView.ViewHolder{
+
+    class MyMessageViewHolder extends RecyclerView.ViewHolder {
         TextView message;
         TextView name;
+        TextView receivedMessageSender;
+        TextView receivedMessage;
 
         public MyMessageViewHolder(View itemView) {
             super(itemView);
             message = itemView.findViewById(R.id.messageTextView);
             name = itemView.findViewById(R.id.nameTextView);
+//            receivedMessageSender = itemView.findViewById(R.id.txt_received_message_sender);
+//            receivedMessage = itemView.findViewById(R.id.text_received_message);
         }
     }
 }

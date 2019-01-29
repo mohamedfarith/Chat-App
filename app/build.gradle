@@ -43,4 +43,6 @@ dependencies {
     // Displaying images
     implementation 'com.github.bumptech.glide:glide:3.6.1'
     implementation 'com.google.firebase:firebase-database:16.0.5'
+    //firebase authentication
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
 }

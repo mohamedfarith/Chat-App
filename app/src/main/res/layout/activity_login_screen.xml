@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginScreen">
+
+    <EditText
+        android:id="@+id/edit_email_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:hint="Enter Email ID"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/edit_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:hint="Enter User Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:layout_gravity="center"
+        android:inputType="textVisiblePassword"
+        android:textColorHint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rectangle_shape_blue"
+        android:text="LOGIN"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle_shape_white"
+        android:text="SIGN UP"
+        android:layout_gravity="center"
+        android:textColor="#000000" />
+</LinearLayout>

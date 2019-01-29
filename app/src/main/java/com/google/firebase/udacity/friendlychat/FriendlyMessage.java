@@ -20,6 +20,15 @@ public class FriendlyMessage {
     private String text;
     private String name;
     private String photoUrl;
+    private String senderId;
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
 
     public FriendlyMessage() {
     }
